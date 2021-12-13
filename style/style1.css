@@ -180,7 +180,7 @@ body {
 .reset:hover{
   background-color: #7be9da;
 }
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .card {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
@@ -235,7 +235,7 @@ body {
     font-weight: bold;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+/* @media (min-width: 768px) and (max-width: 1024px) {
   .card {
     width: 90%;
   }
@@ -246,4 +246,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=style1.css.map */
+# sourceMappingURL=style1.css.map */

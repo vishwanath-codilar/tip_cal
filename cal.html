@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>addition</h1>
+    <label>Number1</label>
+    <input type="text" id="n1">
+    <label>Number2</label>
+    <input type="text" id="n2">
+   <div class="cal">
+       <div class="btn">add</div>
+       <div class="btn">sub</div>
+       <div class="btn">mult</div>
+       <div class="btn">div</div>
+      
+       
+   </div>
+   <h1>Result</h1>
+   <div id="Output">hag</div>
+
+<script>
+    var a=document.getElementById("n1");
+    var b=document.getElementById("n2");
+    const output= document.getElementById("Output");
+
+  
+    const operation=document.querySelectorAll(".btn");
+
+    operation.forEach(btn=>{
+        btn.addEventListener("click",AddOperation)
+    });
+
+    a.addEventListener("input",setA);
+    b.addEventListener("input",setB);
+    // submit.addEventListener("click",Addition);
+    var num1=0;
+    var num2=0;
+    var result=0;
+    function setA(){
+     
+            num1=parseFloat(a.value);
+            console.log(num1);
+
+    }
+    function setB(){
+   
+            num2=parseFloat(b.value)
+            console.log(num2);
+
+        
+    }
+
+   function AddOperation(event){
+       const b=event.target.innerHTML;
+    //    console.log(b);
+       
+        if(b== 'add'){
+          result=num1+num2;
+         output.innerHTML=result;   
+        }else if(b=='sub'){
+        result=num1-num2;
+        output.innerHTML=result;
+        }else if(b=='mult'){
+        result=num1*num2;
+        output.innerHTML=result;
+            
+       }else if(b=='div' & num2!=0)
+        {
+            result=num1/num2;
+            output.innerHTML=result;
+            
+        }else{
+            alert("num2 not be Zero")
+         }
+       
+}
+   
+</script>
+</body>
+</html>

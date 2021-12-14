@@ -61,6 +61,8 @@ function setNumberOfPeople(){
      if(n_people <= 0)
      {
         errorMsg.classList.add('show-error-msg');
+        
+        peoples.value="";
         setTimeout(function(){
             errorMsg.classList.remove('show-error-msg');
         }, 3000);

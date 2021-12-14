@@ -184,7 +184,7 @@ body {
 @media screen and (min-width: 868px) {
   .card {
     grid-template-columns: repeat(2, 1fr);
-    width: 42%;
+    width: 64%;
     font-size: 12px;
   }
   .card .card_input .input_Tips {

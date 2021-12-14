@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=>, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .b{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+
+</style>
 <body>
     <h1>addition</h1>
     <label>Number1</label>
@@ -22,14 +31,22 @@
    </div>
    <h1>Result</h1>
    <div id="Output">hag</div>
+   <h1>Toggle</h1>
+    <div class="a">hello</div>
+    <div class="b">vishwa</div>
+    <button id="click">click me</button>
 
 <script>
     var a=document.getElementById("n1");
     var b=document.getElementById("n2");
     const output= document.getElementById("Output");
+    const clik=document.getElementById("click");
+    const aa=document.getElementsByClassName("a");
+   
 
   
     const operation=document.querySelectorAll(".btn");
+    clik.addEventListener("click",toggle);
 
     operation.forEach(btn=>{
         btn.addEventListener("click",AddOperation)
@@ -57,11 +74,11 @@
 
    function AddOperation(event){
        const b=event.target.innerHTML;
-    //    console.log(b);
+      console.log(b);
        
         if(b== 'add'){
           result=num1+num2;
-         output.innerHTML=result;   
+         output.innerHTML=a.innerText;   
         }else if(b=='sub'){
         result=num1-num2;
         output.innerHTML=result;
@@ -77,8 +94,13 @@
         }else{
             alert("num2 not be Zero")
          }
+        
        
 }
+function toggle(){
+    const bb=document.querySelector(".b");
+             bb.classList.toggle("show");
+         }
    
 </script>
 </body>
